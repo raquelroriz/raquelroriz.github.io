@@ -3,7 +3,7 @@ import resumeRaquel from "../assets/resumeRaquel.pdf"
 const Cv = () => {
   return (
     <div>
-      <a href="resumeRaquel.pdf">
+      <a href={resumeRaquel} target="_blank" rel="noopener noreferrer">
         <svg 
          className="w-6 h-6 text-gray-800 dark:text-white" 
          aria-hidden="true" 

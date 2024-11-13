@@ -1,12 +1,19 @@
-import './App.css'
-
+import bgImage from "./assets/bgImage.jpg"
 import Card from './components/Card'
 
 function App() {
 
   return (
-    <div className='App'>
-      <Card />
+    <div
+    className="relative overflow-hidden bg-cover bg-center bg-no-repeat p-12 text-center"
+    style={{
+        backgroundImage: `url("${bgImage}")`,
+        height: "100vh",
+    }}
+    >
+     <div className='flex justify-center items-center min-h-screen'>
+        <Card />
+      </div>
     </div>
   )
 }
