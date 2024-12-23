@@ -78,6 +78,14 @@ return (
         </div>
       </div>
     ))}
+        <div className="flex justify-end mt-8">
+        <button
+          onClick={() => window.history.back()}
+          className="border border-[rgb(249,247,246)] p-2.5 rounded-xl transition-opacity duration-500 opacity-90 cursor-pointer px-6 py-2 bg-blue-900 text-white hover:bg-blue-700"
+        >
+          Return
+        </button>
+      </div>
   </div>
 );
 

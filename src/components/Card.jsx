@@ -8,6 +8,7 @@ import Github from "../icons/GitHub"
 import Linkedin from "../icons/Linkedin"
 import Email from "../icons/Email"
 import Cv from "../icons/Cv"
+import Portfolio from "../pages/Portfolio"
 
 const Card = () => {
   return (
@@ -34,7 +35,9 @@ const Card = () => {
       </div>
       <br />
       <Link to="/portfolio">
-        <button className="btn" >Portfolio</button>
+        <button className="btn" >
+          Portfolio
+        </button>
       </Link>
       
     </div>
