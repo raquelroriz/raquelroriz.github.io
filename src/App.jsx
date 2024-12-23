@@ -1,19 +1,17 @@
-import bgImage from "./assets/bgImage.jpg"
-import Card from './components/Card'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "./pages/Home"
+import Portfolio from './pages/Portfolio';
 
 function App() {
 
   return (
-    <div
-    className="relative overflow-hidden bg-cover bg-center bg-no-repeat p-12 text-center"
-    style={{
-        backgroundImage: `url("${bgImage}")`,
-        height: "100vh",
-    }}
-    >
-     <div className='flex justify-center items-center min-h-screen'>
-        <Card />
-      </div>
+    <div>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
+      </BrowserRouter>
     </div>
   )
 }

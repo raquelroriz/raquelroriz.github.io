@@ -1,8 +1,8 @@
 import "./Card.css"
+import { Link } from "react-router-dom"
 import React from 'react'
 
 import kel from "../assets/kel.jpeg"
-
 
 import Github from "../icons/GitHub"
 import Linkedin from "../icons/Linkedin"
@@ -33,7 +33,9 @@ const Card = () => {
          <br />
       </div>
       <br />
-      <button className="btn">Portfolio</button>
+      <Link to="/portfolio">
+        <button className="btn" >Portfolio</button>
+      </Link>
       
     </div>
 
