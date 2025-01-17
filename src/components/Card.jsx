@@ -13,20 +13,20 @@ import Portfolio from "../pages/Portfolio"
 const Card = () => {
   return (
 
-    <div className="container-card relative w-80 bg-white rounded-lg shadow-lg p-6 pt-16 font-serif ">
+    <div className="justify-center items-center w-[350px] h-[350px] border-2 border-white bg-[rgba(6,13,15,0.85)] rounded-lg relative shadow-lg p-6 pt-16 font-serif ">
 
-      <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
-        <img src={kel} id="img" alt="Raquel" className="w-32 h-32 rounded-full border-2 border-white shadow-md"/>
+      <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+        <img src={kel} id="img" alt="Raquel" className="w-36 h-36 rounded-full border-2 border-white shadow-md"/>
       </div>
 
-      <br />
-      <div className="text-center mt-4">
+
+      <div className="text-center text-white mt-12">
         <h1 className="text-2xl font-bold">Maria Raquel Roriz</h1>
-        <p className="text-1xl font-bold ">FrontEnd Developer</p>
-        <p className="text-white text-sm/[22px] ">React | JS | HTML | CSS</p>
+        <p className="text-lg font-semibold">FrontEnd Developer</p>
+        <p className="text-sm text-gray-500 mt-1">React | JS | HTML | CSS</p>
       </div>
 
-      <div className="mt-8 flex gap-x-4 space-x-3">
+      <div className="mt-6 flex justify-center gap-4">
          <Github />
          <Linkedin />
          <Cv />

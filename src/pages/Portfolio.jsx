@@ -49,44 +49,59 @@ const renderPreview = (url) => {
 
 
 return (
-  <div className="p-8 bg-[rgba(1,15,60,0.852)]">
-    {Object.keys(groupedRepos).map((project) => (
-      <div className="mb-8" key={project}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {groupedRepos[project].map((repo) => (
-            <div
-              key={repo.id}
-              className="relative p-10 border rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white"
-            >
-              <h3 className="text-lg font-bold mb-2 text-center text-gray-800">
-                {repo.name}
-              </h3>
-              <p className="text-gray-600 text-justify mb-4">{repo.description.replace('|| portfolio;', '').trim()}</p>
-              
-              {renderPreview(repo.html_url)}
 
-              <a
-                href={repo.html_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-2 left-2 text-blue-500 hover:underline"
-              >
-                Repository
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-    ))}
-        <div className="flex justify-end mt-8">
-        <button
-          onClick={() => window.history.back()}
-          className="border border-[rgb(249,247,246)] p-2.5 rounded-xl transition-opacity duration-500 opacity-90 cursor-pointer px-6 py-2 bg-blue-900 text-white hover:bg-blue-700"
+  <>
+    <div className="w-full flex items-center bg-gray-100 p-2 shadow-md rounded-lg">
+      <button
+        onClick={() => window.history.back()}
+        className="text-gray-800 text-lg  flex items-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
         >
-          Return
-        </button>
-      </div>
-  </div>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Raquel's Portfolio
+      </button>
+    </div>
+
+    <div className="p-8 bg-[rgba(223,230,233,0.85)]">
+
+      {Object.keys(groupedRepos).map((project) => (
+        <div className="mb-8" key={project}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {groupedRepos[project].map((repo) => (
+              <div
+                key={repo.id}
+                className="relative p-10 border rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white"
+              >
+                <h3 className="text-lg font-bold mb-2 text-center text-gray-800">
+                  {repo.name}
+                </h3>
+                <p className="text-gray-600 text-justify mb-4">{repo.description.replace('|| portfolio;', '').trim()}</p>
+                
+                {renderPreview(repo.html_url)}
+
+                <a
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-2 left-2 text-blue-500 hover:underline"
+                >
+                  Repository
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </>
 );
 
 } 
